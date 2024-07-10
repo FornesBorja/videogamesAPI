@@ -16,6 +16,24 @@
 
     - npm i mongoose
     - Create src/database/db.js and configure database
+    - Create MONGO_URI in .env 
     - Call DB in server.js
 
+- Models making
+    - Create src/entities for models
+    - Create a folder for every entity and then with use the example.model.js name
+    - Import schema and model from mongoose
+    - Create schema. (see game.model.js for a basic template)
+    - Create model. (see game.model.js for a basic template)
+    - Export model.
+
+- Controller making
+    -
+
 </details>
+
+<details>
+    <summary>Endpoints</summary>
+    
+</details>
+
