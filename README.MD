@@ -7,7 +7,7 @@
 
     - npm i express
     - Make server.js file
-    - Import express in server.js and make basic structure.
+    - Import express in server.js and make basic structure. (see server.js for a basic template)
     - npm i nodemon
     - npm i dotenv
     - Make "healthy" endpoint to be sure server works.
@@ -27,8 +27,14 @@
     - Create model. (see game.model.js for a basic template)
     - Export model.
 
+Before doing any endpoint we need to make the controllers.
+
 - Controller making
-    -
+    - Create the file we want to do the controler (inside the folder entities) with the structure example.controller.js
+    - Recover the info. (see games.controller.js for a basic template)
+    - Make sure the info exist. (see games.controller.js for a basic template)
+        -  Handle the info if needed.
+    - Answer with the info.
 
 </details>
 

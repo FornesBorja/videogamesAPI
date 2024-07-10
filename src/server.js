@@ -1,10 +1,13 @@
 import express from "express";
 import "dotenv/config";
 import { dbConnection } from "./database/db.js";
+import { createGames } from "./entities/games/games.controller.js";
 
 const app = express();
 
 const PORT = process.env.PORT || 4000;
+
+app.use(express.json())
 
 app.get("/healthy", (req, res) => {
   res.json({
