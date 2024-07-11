@@ -1,3 +1,4 @@
+import { Types } from "mongoose";
 import Game from "./game.model.js";
 
 export const createGames = async (req, res) => {
@@ -41,12 +42,16 @@ export const getAllGames = async (req, res) => {
   }
 };
 
-export const deleteGame = async (req, res) => {
+export const deleteGameById = async (req, res) => {
   try {
     const id = req.params.id;
+    const idToDeleteValid = Types.ObjectId.isValid(id);
+    if (!idToDeleteValid) {
+      throw new Error("The id is not valid");
+    }
     const deleteOne = await Game.findByIdAndDelete(id);
     if (!deleteOne) {
-      throw new Error("The id doesn't exist");
+      throw new Error("The id doesn't exist in db");
     }
     return res.status(201).json({
       success: true,

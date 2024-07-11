@@ -40,7 +40,7 @@ Before doing any endpoint we need to make the controllers.
     - Recover the info
     - Answer with the info
     FOR AN UPDATE:
-
+        
 - Abstract the routes in other files to take the responsability
     - Import router from express (see games.routes.js for a basic template)
     - Create const router (see games.routes.js for a basic template)
