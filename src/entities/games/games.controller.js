@@ -40,3 +40,24 @@ export const getAllGames = async (req, res) => {
     });
   }
 };
+
+export const deleteGame = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deleteOne = await Game.findByIdAndDelete(id);
+    if (!deleteOne) {
+      throw new Error("The id doesn't exist");
+    }
+    return res.status(201).json({
+      success: true,
+      message: "Games deleted successfully",
+      data: deleteOne,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Error deleting games",
+      error: error.message,
+    });
+  }
+};
